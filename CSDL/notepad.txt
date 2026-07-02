@@ -1,0 +1,19 @@
+Dòng lệnh cơ bản:
+
+CREATE DATABASE CSDL_thuchanh;
+-- Chú thích: Tạo một cơ sở dữ liệu mới tên là CSDL_thuchanh (Sẽ báo lỗi nếu tên này đã tồn tại).
+
+CREATE DATABASE IF NOT EXISTS CSDL_thuchanh;
+-- Chú thích: Kiểm tra nếu chưa có tên CSDL_thuchanh thì mới tạo (An toàn, không lo bị dừng chương trình nếu trùng tên).
+
+SHOW DATABASES;
+-- Chú thích: Liệt kê toàn bộ các cơ sở dữ liệu hiện có trong hệ thống của bạn.
+
+SHOW DATABASES LIKE '%h';
+-- Chú thích: Tìm và hiển thị các cơ sở dữ liệu có ký tự kết thúc bằng chữ "h".
+
+DROP DATABASE CSDL_thuchanh;
+-- Chú thích: Xóa hoàn toàn cơ sở dữ liệu tên là CSDL_thuchanh (Sẽ báo lỗi nếu không tìm thấy tên này).
+
+DROP DATABASE IF EXISTS CSDL_thuchanh;
+-- Chú thích: Chỉ xóa nếu cơ sở dữ liệu CSDL_thuchanh có tồn tại (An toàn, không báo lỗi nếu không tìm thấy).
