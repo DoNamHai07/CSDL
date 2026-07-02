@@ -1,4 +1,5 @@
 Một số ràng buộc dữ liệu trong Database 
+
 1. Ràng buộc dữ liệu (Constraint) 
 Chúng ta sử dụng ràng buộc dữ liệu khi tạo ra bảng hoặc chỉnh sửa bảng, hoặc liên kết các 
 bảng với nhau. 
@@ -8,6 +9,7 @@ Column1 datatype constraint,
 Column2 datatype constraint, 
 Column3 datatype constraint 
 ); 
+
 2. Constraint NOT NULL  ràng buộc không rỗng 
 Khi khai báo NOL NULL cho một trường (cột), khi nhập dữ liệu vào bảng thì trường 
 (cột) đấy không được phép để trống (NULL). 
@@ -28,6 +30,7 @@ values (2, NULL, 'phương', NULL);
 Cũng có thể sửa được ràng buộc của trường Tuoi từ không ràng buộc thành ràng buộc 
 NOT NULL như sau. (Chú ý chỉ áp dụng với bảng chưa có dữ liệu). 
 Alter table sinhvien  Modify Tuoi int not null; 
+
 3. Constraint Unique  - ràng buộc duy nhất 
 Từ khóa UNIQUE được dùng cho một trường dữ liệu, khi chúng ta muốn những giá trị 
 trong trường đó là duy nhất và không lặp lại.  
@@ -46,6 +49,7 @@ TenSV char(255) not null,
 Tuoi int, 
 Constraint MaSV_HoSV Unique(MaSV, HoSV)  
 ); 
+
 4. Constraint khóa chính (Primary Key) 
 Khóa chính (PRIMARY KEY) dùng để phân biệt các dòng (đối tượng, thực thể) trong một 
 bảng dữ liệu. Hay có thể dùng để tạo liên kết với các bảng khác. Trường dung làm khóa 
@@ -59,6 +63,7 @@ TenSV char(255) not null,
 Tuoi int, 
 Primary key (ID)  
 );  
+
 5. Constraint khóa phụ - ràng buộc khóa phụ 
 Khóa FOREIGN KEY để khai báo khoá phụ và dùng để tham chiếu tới một bảng khác.  
 Create table sinhvien( 
@@ -75,6 +80,7 @@ Ma_NguoiThan int not null,
 HoTen_NguoiThan char (50), 
 Primary key (ID_SV, Ma_NguoiThan)  
 ); 
+
 6. Constraint Check  - ràng buộc kiểm tra giá trị trường dữ liệu 
 Check dùng để kiểm tra dữ liệu nhập vào một trường hoặc một số trường phải nằm trong 
 danh sách mà chúng ta đã định trước. Ví dụ, giới tính của SV chỉ là Nam hoặc Nữ, vậy khi 
@@ -87,6 +93,7 @@ Tuoi int,
 GioiTinh char(3) Check ('Nam', 'Nu'), 
 Primary key (ID)  
 );  
+
 7. Constraint Default – Ràng buộc mặc định 
 Khi ta muốn tạo một giá trị mặc định cho một trường. Ví dụ, tạo giá trị mặc định cho các 
 bạn sinh viên ở thuộc tính QuocTich là Việt Nam. 
@@ -99,6 +106,7 @@ GioiTinh char(3) Check ('Nam', 'Nu'),
 QuocTich char (50) default 'Việt Nam', 
 Primary key (ID)  
 );  
+
 8. Constraint Auto Increment – Ràng buộc tự động tăng 
 Chúng ta sử dụng từ khóa Auto Increment để tăng tự động giá trị cho một trường trong 
 bảng. Trường này thường là khóa chính. Tăng tự động có nghĩa là lúc đầu giá trị nó là 1. 
@@ -113,6 +121,7 @@ QuocTich char (50) default 'Việt Nam',
 Primary key (ID)  
 );  
 Câu hỏi: Liệu có thể chỉnh sử bước nhảy đơn vị tăng tự động không? 
+
 9. Constraint Index  - ràng buộc chỉ mục 
 Sử dụng Index để đánh các chỉ mục của Table. Index giống như trang mục lục của một 
 cuốn sách. Dựa vào Index thì dễ tìm kiếm thông tin hơn.  
