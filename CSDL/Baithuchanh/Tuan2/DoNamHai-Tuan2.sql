@@ -1,4 +1,5 @@
-congtrinhcongtrinh
+create database QLNV;
+use QLNV;
 create table PhongBan (
 MaPB int primary key,
 TenPB nvarchar(50) not null,
