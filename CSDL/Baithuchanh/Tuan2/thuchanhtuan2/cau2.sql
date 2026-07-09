@@ -23,7 +23,7 @@ FOREIGN KEY (MaPB) REFERENCES PhongBan(MaPB);
 create table CongTrinh (
 MaCT int primary key,
 TenCT nvarchar(50) not null,
-NgayKC datetime not null,
+NgayKC datetime not null DEFAULT (CURRENT_DATE),
 NgayHT datetime not null,
 Diadiem nvarchar(50)
 );
